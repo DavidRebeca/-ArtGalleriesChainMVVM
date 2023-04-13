@@ -33,7 +33,7 @@ public class ArtWorkPersistenceTest {
 
         // Create a test object
         ArtGallery artGallery=new ArtGallery(1, "Le Galerie", "Paris");
-        ArtWork testObject = new ArtWork(123,"Printesa","Brancusi",1920, "Sculpture", artGallery);
+        ArtWork testObject = new ArtWork(123,"Printesa","Brancusi",1920, "Sculpture", artGallery,"available");
 
 
         // Set the session factory of the DAO to use the mock session
@@ -62,7 +62,7 @@ public class ArtWorkPersistenceTest {
 
         // Create a test object
         ArtGallery artGallery=new ArtGallery(1, "Le Galerie", "Paris");
-        ArtWork testObject = new ArtWork(123,"Printesa","Brancusi",1920, "Sculpture", artGallery);
+        ArtWork testObject = new ArtWork(123,"Printesa","Brancusi",1920, "Sculpture", artGallery, "available");
 
         // Set the session factory of the DAO to use the mock session
         HibernateUtil.setSessionFactory(mock(SessionFactory.class));

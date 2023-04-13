@@ -1,3 +1,4 @@
+import model.ArtGallery;
 import model.User;
 import model.persistence.HibernateUtil;
 import model.persistence.UserPersistence;
@@ -32,7 +33,8 @@ public class UserPersistenceTest {
         when(mockSession.beginTransaction()).thenReturn(mockTransaction);
 
         // Create a test object
-        User testObject = new User(123,"Popescu Ion","Ion","admin", "Admin", "ion@yahoo.com");
+        ArtGallery artGallery=new ArtGallery(1, "Le Galerie", "Paris");
+        User testObject = new User(123,"Popescu Ion","Ion","admin", "Admin", "ion@yahoo.com", artGallery);
 
 
         // Set the session factory of the DAO to use the mock session
@@ -60,7 +62,8 @@ public class UserPersistenceTest {
         when(mockSession.beginTransaction()).thenReturn(mockTransaction);
 
         // Create a test object
-        User testObject = new User(123,"Popescu Ion","Ion","admin", "Admin", "ion@yahoo.com");
+        ArtGallery artGallery=new ArtGallery(1, "Le Galerie", "Paris");
+        User testObject = new User(123,"Popescu Ion","Ion","admin", "Admin", "ion@yahoo.com",artGallery);
 
 
 

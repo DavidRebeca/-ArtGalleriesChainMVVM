@@ -1,66 +1,84 @@
 package view;
 
-import presenter.AdminPresenter;
+import model.User;
+import net.sds.mvvm.bindings.Bind;
+import net.sds.mvvm.bindings.BindValues;
+import net.sds.mvvm.bindings.Binder;
+import net.sds.mvvm.bindings.BindingType;
+import view_model.AdminVM;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AdminView extends JFrame implements UserInterface {
+public class AdminView extends JFrame {
     private JFrame frame;
     private JLabel titleLabel;
     private JButton createButton;
     private JButton updateButton;
     private JButton deleteButton;
     private JButton guestButton;
-    private JTable usersTable;
 
-    String[] head = {"Id","Name", "Username", "Password", "Type", "Email"};
-    Object[][] data = new Object[100][6];
 
+    String[] head = {"Id","Name", "Username", "Password", "Type", "Email", "Art Gallery"};
+    Object[][] data = new Object[150][7];
+    @BindValues({@Bind(value = "model", target = "model.value", type = BindingType.TARGET_TO_SOURCE),
+            @Bind(value = "selectedRow", target = "row.value", type = BindingType.BI_DIRECTIONAL)})
+    private JTable usersTable=new JTable(data,head);
+
+    private AdminVM vm;
 
     public AdminView(){
+        vm=new AdminVM();
         frame = new JFrame("Admin");
-        frame.setSize(700, 500);
+        frame.setSize(840, 500);
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (int) ((dimension.getWidth() - frame.getWidth()) / 2);
         int y = (int) ((dimension.getHeight() - frame.getHeight()) / 2);
         frame.setLocation(x, y);
         frame.setLayout(null);
         frame.getContentPane().setBackground(new Color(212, 227, 255 ));
-
-        AdminPresenter adminPresenter=new AdminPresenter(this);
+        usersTable.setFont(new Font("Verdana", Font.BOLD, 12));
+        usersTable.getTableHeader().setFont(new Font("Verdana", Font.BOLD, 14));
+        usersTable.getTableHeader().setBackground(new Color(207, 210, 211));
+        usersTable.getColumnModel().getColumn(0).setPreferredWidth(5);
+        usersTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+        JScrollPane scrollPane = new JScrollPane(usersTable);
+        scrollPane.setBounds(10, 70, 805, 300);
+        frame.add(scrollPane);
 
         titleLabel = new JLabel("USERS", SwingConstants.CENTER);
-        titleLabel.setBounds(250, 10, 200, 30);
-        titleLabel.setFont(new Font("Verdana", Font.BOLD, 20));
+        titleLabel.setBounds(295, 10, 200, 30);
+        titleLabel.setFont(new Font("Verdana", Font.BOLD, 25));
 
         createButton = new JButton("Create");
-        createButton.setBounds(50, 400, 120, 30);
+        createButton.setBounds(10, 400, 120, 30);
         createButton.setFont(new Font("Verdana", Font.BOLD, 20));
         createButton.setBackground(new Color(100, 135, 242  ));
 
         updateButton = new JButton("Update");
-        updateButton.setBounds(175, 400, 120, 30);
+        updateButton.setBounds(135, 400, 120, 30);
         updateButton.setFont(new Font("Verdana", Font.BOLD, 20));
         updateButton.setBackground(new Color(100, 135, 242  ));
 
         deleteButton = new JButton("Delete");
-        deleteButton.setBounds(300, 400, 120, 30);
+        deleteButton.setBounds(260, 400, 120, 30);
         deleteButton.setFont(new Font("Verdana", Font.BOLD, 20));
         deleteButton.setBackground(new Color(100, 135, 242  ));
 
         guestButton = new JButton("Guest");
-        guestButton.setBounds(530, 400, 120, 30);
+        guestButton.setBounds(690, 400, 120, 30);
         guestButton.setFont(new Font("Verdana", Font.BOLD, 20));
         guestButton.setBackground(new Color(100, 135, 242  ));
 
-        usersTable = new JTable(data, head);
-        JScrollPane scrollPane = new JScrollPane(usersTable);
-        scrollPane.setBounds(50, 70, 600, 300);
-
-       adminPresenter.showData();
+        vm.getShowUsers().execute();
+        try {
+            Binder.bind(this, vm);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
 
         frame.setVisible(true);
         frame.add(updateButton);
@@ -68,21 +86,13 @@ public class AdminView extends JFrame implements UserInterface {
         frame.add(createButton);
         frame.add(deleteButton);
         frame.add(guestButton);
-        frame.add(scrollPane);
-
-        addPlaceHolderToFields();
-
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
-    public void addPlaceHolderToFields() {
-
-        AdminPresenter adminPresenter=new AdminPresenter(this);
 
         guestButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                adminPresenter.changeToGuestView();
+               new GuestView();
+               frame.dispose();
 
             }
         });
@@ -90,59 +100,29 @@ public class AdminView extends JFrame implements UserInterface {
         createButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                adminPresenter.insertUserData();
+              // vm.setRow(usersTable.getSelectedRow());
 
+               vm.getInsertCommand().execute();
+               frame.dispose();
             }
         });
         updateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                adminPresenter.updateUserData();
-
+            //    vm.setRow(usersTable.getSelectedRow());
+              vm.getUpdateCommand().execute();
+              frame.dispose();
             }
         });
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-              adminPresenter.deleteUserData();
-
+              //  vm.setRow(usersTable.getSelectedRow());
+              vm.getDeleteCommand().execute();
+              frame.dispose();
             }
         });
 
-    }
-
-    @Override
-    public String[] getSelectedInfo() {
-        int row = usersTable.getSelectedRow();
-        String[] col= new String[6];
-        for(int i=0; i<6; i++)
-           col[i]=usersTable.getValueAt(row, i).toString();
-        return col;
-    }
-
-    @Override
-    public void writeMessageOptionPanel(String mesaj) {
-        JOptionPane.showMessageDialog(this.frame, mesaj);
-    }
-
-    @Override
-    public void paintTable( Object[][] data) {
-        usersTable = new JTable(data, head);
-        JScrollPane scrollPane = new JScrollPane(usersTable);
-        scrollPane.setBounds(50, 70, 600, 300);
-        frame.add(scrollPane);
-    }
-
-    @Override
-    public void changeViewtoGuest() {
-        new GuestView();
-        frame.dispose();
-    }
-
-    @Override
-    public void refresh() {
-        new AdminView();
-        frame.dispose();
     }
 
 }

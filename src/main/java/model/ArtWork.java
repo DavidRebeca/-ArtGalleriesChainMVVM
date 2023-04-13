@@ -12,19 +12,29 @@ public class ArtWork implements Comparable{
     private String artist;
     private int year;
     private String type;
+    private String status;
     @ManyToOne
     @JoinColumn(name = "idGallery")
     private ArtGallery artGallery;
 
     public ArtWork(){}
 
-    public ArtWork(int idArtWork, String name, String artist, int year, String type, ArtGallery artGallery) {
+    public ArtWork(int idArtWork, String name, String artist, int year, String type, ArtGallery artGallery, String status) {
         this.idArtWork = idArtWork;
         this.name = name;
         this.artist = artist;
         this.year = year;
         this.type = type;
         this.artGallery = artGallery;
+        this.status=status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public ArtGallery getArtGallery() {

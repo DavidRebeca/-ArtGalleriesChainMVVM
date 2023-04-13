@@ -4,7 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca74d665-3702-4db5-a516-9bb646bf67d0" name="Changes" comment="" />
+    <list default="true" id="ca74d665-3702-4db5-a516-9bb646bf67d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArtGalleriesMVP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ArtGalleriesMVP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ArtWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ArtWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persistence/ArtGalleryPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persistence/ArtGalleryPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/persistence/ArtWorkPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persistence/ArtWorkPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/AdminPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/EmployeePresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/GuestPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenter/LoginPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AdminView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/EmployeeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/EmployeeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GuestUserInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GuestView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/LoginInterfaceView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/UserInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/ViewInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ArtWorkPersistenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArtWorkPersistenceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserPersistenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserPersistenceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/ArtWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/ArtWork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/persistence/ArtGalleryPersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/persistence/ArtGalleryPersistence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/persistence/ArtWorkPersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/persistence/ArtWorkPersistence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presenter/AdminPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presenter/EmployeePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presenter/GuestPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presenter/LoginPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/AdminView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/AdminView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/AdminView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/AdminView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/AdminView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EmployeeView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EmployeeView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EmployeeView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EmployeeView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EmployeeView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GuestUserInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GuestView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GuestView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GuestView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GuestView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GuestView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GuestView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/LoginInterfaceView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/LoginView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/LoginView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/LoginView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/LoginView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/LoginView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/LoginView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/UserInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/ViewInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ArtWorkPersistenceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ArtWorkPersistenceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/UserPersistenceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UserPersistenceTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,11 +68,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -99,14 +157,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lib" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -212,11 +272,49 @@
       <workItem from="1679498455770" duration="16167000" />
       <workItem from="1679557371333" duration="156000" />
       <workItem from="1679563721413" duration="3273000" />
+      <workItem from="1679568283868" duration="52000" />
+      <workItem from="1680007188912" duration="53000" />
+      <workItem from="1680168941090" duration="919000" />
+      <workItem from="1680287756390" duration="6135000" />
+      <workItem from="1680333877355" duration="11428000" />
+      <workItem from="1680375631970" duration="4789000" />
+      <workItem from="1680430515253" duration="4272000" />
+      <workItem from="1680532326279" duration="4830000" />
+      <workItem from="1680618066593" duration="88000" />
+      <workItem from="1680720874761" duration="550000" />
+      <workItem from="1680766843287" duration="613000" />
+      <workItem from="1680768773137" duration="4275000" />
+      <workItem from="1680890782174" duration="2623000" />
+      <workItem from="1680894395283" duration="32739000" />
+      <workItem from="1681032037638" duration="19706000" />
+      <workItem from="1681062777348" duration="2460000" />
+      <workItem from="1681129012258" duration="474000" />
+      <workItem from="1681130127434" duration="761000" />
+      <workItem from="1681131468338" duration="2058000" />
+      <workItem from="1681200596097" duration="26000" />
+      <workItem from="1681212945415" duration="1702000" />
+      <workItem from="1681215298057" duration="8000" />
+      <workItem from="1681217079495" duration="101000" />
+      <workItem from="1681221232130" duration="551000" />
+      <workItem from="1681309278814" duration="3179000" />
+      <workItem from="1681363214284" duration="157000" />
+      <workItem from="1681372911251" duration="2001000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

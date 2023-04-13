@@ -1,9 +1,6 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
@@ -16,16 +13,27 @@ public class User {
      private String password;
      private String userType;
      private String email;
-
+     @ManyToOne
+     @JoinColumn(name = "idGallery")
+     private ArtGallery artGallery;
      public User(){}
 
-     public User(int idUser, String name, String username, String password, String userType, String email) {
+     public User(int idUser, String name, String username, String password, String userType, String email,ArtGallery artGallery) {
           this.idUser = idUser;
           this.name = name;
           this.username = username;
           this.password = password;
           this.userType = userType;
           this.email = email;
+          this.artGallery=artGallery;
+     }
+
+     public ArtGallery getArtGallery() {
+          return artGallery;
+     }
+
+     public void setArtGallery(ArtGallery artGallery) {
+          this.artGallery = artGallery;
      }
 
      public String getUserType() {

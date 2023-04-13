@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+    <artWork>
+        <id>3</id>
+        <title>Bird in space</title>
+        <artist>Constantin Brancusi</artist>
+        <year>1928</year>
+        <type>sculpture</type>
+        <gallery>Lisson</gallery>
+        <status>available</status>
+    </artWork>
+    <artWork>
+        <id>2</id>
+        <title> The Starry Night</title>
+        <artist>Vincent van Gogh</artist>
+        <year>1889</year>
+        <type>painting</type>
+        <gallery>Metropolitan</gallery>
+        <status>available</status>
+    </artWork>
+    <artWork>
+        <id>1</id>
+        <title>The Kiss</title>
+        <artist>Gustav Klimt</artist>
+        <year>1908</year>
+        <type>painting</type>
+        <gallery>Tate</gallery>
+        <status>available</status>
+    </artWork>
+    <artWork>
+        <id>4</id>
+        <title>Head</title>
+        <artist>Constantin Brancusi</artist>
+        <year>1920</year>
+        <type>sculpture</type>
+        <gallery>Lisson</gallery>
+        <status>selled</status>
+    </artWork>
+</list>

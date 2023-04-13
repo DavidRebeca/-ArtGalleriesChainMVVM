@@ -1,7 +1,5 @@
 package view;
 
-import presenter.LoginPresenter;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -9,16 +7,25 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import net.sds.mvvm.bindings.Bind;
+import net.sds.mvvm.bindings.Binder;
+import net.sds.mvvm.bindings.BindingType;
+import view_model.LoginVM;
 
-public class LoginView extends JFrame implements LoginInterfaceView{
+public class LoginView extends JFrame {
+
     private JFrame frame;
     private JLabel usernameLabel;
     private JLabel imgLabel;
     private JLabel passwordLabel;
+    @Bind(value = "text", target = "userField.value", type = BindingType.BI_DIRECTIONAL)
     private JTextField usernameTextField;
+    @Bind(value = "text", target = "passField.value", type = BindingType.BI_DIRECTIONAL)
     private JPasswordField passwordTextField;
     private JButton loginButton;
     private JButton guestButton;
+    private LoginVM vm;
+
     public LoginView() throws IOException {
 
         frame = new JFrame("Login");
@@ -54,12 +61,12 @@ public class LoginView extends JFrame implements LoginInterfaceView{
         loginButton = new JButton("LOGIN");
         loginButton.setBounds(140, 180, 120, 30);
         loginButton.setFont(new Font("Verdana", Font.BOLD, 20));
-        loginButton.setBackground(new Color(100, 135, 242  ));
+        loginButton.setBackground(new Color(100, 135, 242));
 
         guestButton = new JButton("GUEST");
         guestButton.setBounds(140, 220, 120, 30);
         guestButton.setFont(new Font("Verdana", Font.BOLD, 20));
-        guestButton.setBackground(new Color(100, 135, 242  ));
+        guestButton.setBackground(new Color(100, 135, 242));
 
         frame.setVisible(true);
         frame.add(usernameLabel);
@@ -71,60 +78,30 @@ public class LoginView extends JFrame implements LoginInterfaceView{
         frame.add(imgLabel);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        addPlaceHolderToFields();
 
-    }
-    public void addPlaceHolderToFields() {
+        vm = new LoginVM();
 
-        LoginPresenter loginPresenter=new LoginPresenter(this);
+        try {
+            Binder.bind(this, vm);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
 
         guestButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                  loginPresenter.changeToGuestView();
-
+               new GuestView();
+               frame.dispose();
             }
         });
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                loginPresenter.logIn();
-
+                vm.getLoginCommand().execute();
+                frame.dispose();
             }
         });
-
-
-    }
-    @Override
-    public void changeViewtoGuest() {
-        new GuestView();
-        frame.dispose();
     }
 
-    @Override
-    public void changeViewtoAdmin() {
-        new AdminView();
-        frame.dispose();
     }
 
-    @Override
-    public void changeViewtoEmployee() {
-        new EmployeeView();
-        frame.dispose();
-    }
-
-    @Override
-    public String accessUsernameField() {
-        return this.usernameTextField.getText();
-    }
-
-    @Override
-    public String accessPasswordField() {
-        return this.passwordTextField.getText();
-    }
-
-    @Override
-    public void writeMessageOptionPanel(String mesaj) {
-        JOptionPane.showMessageDialog(this.frame, mesaj);
-    }
-}

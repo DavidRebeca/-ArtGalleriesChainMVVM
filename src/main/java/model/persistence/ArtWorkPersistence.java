@@ -14,5 +14,14 @@ public class ArtWorkPersistence extends AbstractPersistence<ArtWork>{
         }
         return null;
     }
+    public ArtWork findArtWorkByTitle(String title){
+        ArrayList<ArtWork> artWorks= (ArrayList<ArtWork>) readAll();
+        for(ArtWork art: artWorks){
+            if(art.getName().equals(title))
+                return art;
+        }
+        return null;
+    }
+
 
 }
